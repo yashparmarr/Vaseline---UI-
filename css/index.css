@@ -12,6 +12,12 @@ body {
 
 /* header part  */
 
+.head {
+    position: sticky ;
+    top:0 ;
+    background-color: white
+}
+
 /* 1st information part  */
 
 .information {
@@ -19,8 +25,6 @@ body {
   gap: 30px;
   width: 100%;
   background: linear-gradient(90deg, rgb(3, 3, 61), #090979);
-  position: sticky;
-  top: 0;
   align-items: center;
   justify-content: flex-end;
   padding: 0 100px;
@@ -56,7 +60,7 @@ body {
   gap: 40px;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 2px;
+  border-bottom: 3px;
   position: relative;
 }
 
@@ -67,35 +71,35 @@ body {
   height: 100%;
   align-items: center;
   background-image: linear-gradient(0deg, #000, #000);
-  background-size: 0% 2px;
+  background-size: 0% 4px;
   background-position: left bottom;
   background-repeat: no-repeat;
-  transition: all 0.9 ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .li-img:hover {
-  background-size: 100% 2px;
+  background-size: 100% 4px;
 }
 
 .li-img > img {
   height: 16px;
   width: 20px;
-  transform: rotate(90deg);
-  margin-left: 3px;
+  transform: rotate(-90deg);
+  margin-left: 2px;
   transition: transform 0.4s ease;
 }
 
 .li-img:hover > img {
   height: 16px;
   width: 20px;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   margin-left: 3px;
 }
 
 .searchBox {
   height: 40px;
   width: 150px;
-  border: 1px solid grey;
+  border: 1px solid hsla(0, 0.00%, 0.00%, 0.16);
   padding: 6px 11px;
   background-color: white;
   margin-left: auto;
