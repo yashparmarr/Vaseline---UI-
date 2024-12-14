@@ -1,0 +1,218 @@
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+/** Hero Section **/
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 500px; 
+    background-color: #1C355B; 
+    color: #fff; 
+    overflow: hidden;
+}
+
+/** Left Section **/
+.left {
+    width: 50px;
+    flex: 1;
+    padding-left: 25px;
+   
+}
+
+.left .home {
+    align-self: flex-start;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.left .home a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.left .home span {
+    color: #fff;
+}
+
+.left h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: #F1D9A1; /* Light gold color */
+}
+
+.left p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #E0E0E0; /* Light gray text */
+}
+
+/** Right Section **/
+.right {
+    width: 50px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Section 1*/
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #ffffff; /* White background */
+    padding: 0px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #103167;
+    margin-bottom: 20px;
+    
+}
+
+hr.underline {
+    width: 100px;
+    height: 5px;
+    background-color: #eecd4b; /* Gold color */
+    border: none;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-size: 1rem;
+    color: #164565; /* Blue color for the link */
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* filter section */
+.filter-section {
+    float: left;
+    width: 20%;
+    padding: 20px; /* Adds padding inside the filter section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+     background-color: #ffffff
+    border-radius: 5px; /* Rounds the corners */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.filter-section h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #130167; /* Darker text color */
+}
+.filter-section input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and text */
+    cursor: pointer;
+}
+
+
+.products-section {
+    float: left;
+    width: 80%; /* Remaining width after the filter section */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next row */
+    gap: 20px;
+    
+}
+
+.product-item {
+   
+    flex-direction: column;
+    justify-content: space-between; /* Aligns content properly */
+    width: calc(33.33% - 20px); /* 3 items per row with spacing adjustment */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Includes padding in the width */
+    padding: 10px;
+    
+}
+.products-section p{
+    color: #103167;
+}
+.product-item img {
+    width: 185px;
+    height: 185px;
+}
+
+.rating {
+    color: #d3b200;
+    font-size: 20px;
+}
+.out-of-stock {
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Align text horizontally in the center */
+    justify-content: center; /* Align text vertically in the center */
+    background-color: #002d5e;
+    color: white;
+    padding: 16px 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Make the button full width */
+    box-sizing: border-box;
+}
+<!--Section 2-->
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #ffffff; /* White background */
+    padding: 0px;
+}
+.container2 {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.read-more2 {
+    font-size: 1.2rem;
+    color: #1C355B; /* Blue color for the link */
+    text-decoration: none;
+    font-weight:bold;
+}
+.read-more2:hover {
+    text-decoration: underline;
+}
+
