@@ -19,6 +19,7 @@ body {
 
 /** Left Section **/
 .left {
+
     width: 50px;
     flex: 1;
     padding-left: 25px;
