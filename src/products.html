@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore Vaseline Products</title>
     <link rel="stylesheet" href="../css/products.css" />
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
   <body>
     <!-- header-section -->
 
@@ -70,14 +74,16 @@
     <!-- hero-section -->
     <div class="hero-section">
       <div class="left">
-        <div class="home">
-          <a href="../index.html">Home</a> &nbsp;/&nbsp; <span>All Products</span>
+        <div class="wrapper">
+            <div class="home">
+                <a href="../index.html">Home</a> &nbsp;/&nbsp; <span>All Products</span>
+              </div>
+              <h1>ALL PRODUCTS</h1>
+              <p class="mt-2">
+                There's a Vaseline® product for every skin need to help you reach for
+                amazing every day.
+              </p>
         </div>
-        <h1>All PRODUCTS</h1>
-        <p>
-          There's a Vaseline® product for every skin need to help you reach for
-          amazing every day.
-        </p>
       </div>
       <div class="right">
           <img src="../public/assets/products images/hero.jpeg" alt="" />
@@ -87,7 +93,7 @@
     <div class="divider"></div>
 
     <section class="section1">
-      <div class="container">
+      <div class="sec">
         <h1>ENJOY HEALTHY, BEAUTIFUL SKIN</h1>
         <hr class="underline" />
         <p>
@@ -99,118 +105,120 @@
       </div>
     </section>
     <!-- Filter and Product Section -->
-    <div class="Filter-product">
-      <!-- Filter Section -->
-
-      <div class="filter-section">
-        <h3>FILTER BY: <a href="#">CLEAR ALL</a></h3>
-        <div class="filter-boder">
-        <h4>Product Category</h4>
-        <label><input type="checkbox" value="lotions-and-moisturizers"/> Lotions and Moisturizers</label><br />
-        <label><input type="checkbox" /> Body Creme</label><br />
-        <label><input type="checkbox" /> Lip Care</label><br />
-        <label><input type="checkbox" /> Protecting Jelly</label><br />
-        <label><input type="checkbox" /> Sun Protection</label><br />
-
-        <h4>Skin Concern</h4>
-        <label><input type="checkbox" /> Dry Skin</label><br />
-        <label><input type="checkbox" /> Very Dry Skin</label><br />
-        <label><input type="checkbox" /> Sun Damage</label><br />
-        <label><input type="checkbox" /> Dull Skin</label><br />
-        <label><input type="checkbox" /> Uneven Skin Tone</label><br />
-        <label><input type="checkbox" /> Itchy Skin</label><br />
-
-        <h4>Ingredients</h4>
-        <label><input type="checkbox" /> Cocoa Butter</label><br />
-        <label><input type="checkbox" /> Aloe Vera</label><br />
-        <label><input type="checkbox" /> Petroleum Jelly</label><br />
-        <label><input type="checkbox" /> Vitamins</label><br />
-        </div>
-    </div>
-
-      <!-- Products Section -->
-      <div class="products-section">
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/rosylips.png"
-            alt="Rosy Lip"
-          />
-          <p>Vaseline® Lip Care®<br />Rosy Lip</p>
-          <div class="rating">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/aloesooth.png"
-            alt="Aloe Fresh"
-          />
-          <p>Vaseline® Lip Care®<br />Aloe Fresh</p>
-          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/lipcaretotalmoisture.png"
-            alt="Total Moisture"
-          />
-          <p>Vaseline® Lip Care®<br />Total Moisture</p>
-          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/lipcarecocoabutter.png"
-            alt="Cocoa Butter"
-          />
-          <p>Vaseline® Lip Care®<br />Cocoa Butter</p>
-          <div class="rating">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/Vaseline.png"
-            alt="Protecting Jelly"
-          />
-          <p>Vaseline® Skin<br />Protecting Jelly</p>
-          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/SPF50.png"
-            alt="Protection SPF 50 Lotion"
-          />
-          <p>
-            Vaseline® Daily Sun<br />Protection SPF 50 Lotion
-          </p>
-          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/DeepRestore.png"
-            alt="Deep Restore Lotion"
-          />
-          <p>
-            Vaseline® Intensive Care<br />Deep Restore Lotion
-          </p>
-          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-        <div class="product-item">
-          <img
-            src="../public/assets/products images/aloeFresh.png"
-            alt="Aloe Fewsh Lotion"
-          />
-          <p>
-            Vaseline® Intensive Care<br />Aloe Fresh Lotion
-          </p>
-          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <button class="out-of-stock">OUT OF STOCK</button>
-        </div>
-      </div>
-        <div class="showmore">
-            <h2><a href="Show More">Show More</a><img src="../public/assets/products images/back button.svg" alt=""></h2>
+    <div class="container-wrapper">
+        <div class="Filter-product">
+            <!-- Filter Section -->
+          
+            <div class="filter-section">
+              <h3>FILTER BY: <a href="#">CLEAR ALL</a></h3>
+              <div class="filter-boder">
+              <h4>Product Category</h4>
+              <label><input type="checkbox" value="lotions-and-moisturizers"/> Lotions and Moisturizers</label><br />
+              <label><input type="checkbox" /> Body Creme</label><br />
+              <label><input type="checkbox" /> Lip Care</label><br />
+              <label><input type="checkbox" /> Protecting Jelly</label><br />
+              <label><input type="checkbox" /> Sun Protection</label><br />
+      
+              <h4>Skin Concern</h4>
+              <label><input type="checkbox" /> Dry Skin</label><br />
+              <label><input type="checkbox" /> Very Dry Skin</label><br />
+              <label><input type="checkbox" /> Sun Damage</label><br />
+              <label><input type="checkbox" /> Dull Skin</label><br />
+              <label><input type="checkbox" /> Uneven Skin Tone</label><br />
+              <label><input type="checkbox" /> Itchy Skin</label><br />
+      
+              <h4>Ingredients</h4>
+              <label><input type="checkbox" /> Cocoa Butter</label><br />
+              <label><input type="checkbox" /> Aloe Vera</label><br />
+              <label><input type="checkbox" /> Petroleum Jelly</label><br />
+              <label><input type="checkbox" /> Vitamins</label><br />
+              </div>
+            </div>
+      
+            <!-- Products Section -->
+            <div class="products-section">
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/rosylips.png"
+                  alt="Rosy Lip"
+                />
+                <p>Vaseline® Lip Care®<br />Rosy Lip</p>
+                <div class="rating">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/aloesooth.png"
+                  alt="Aloe Fresh"
+                />
+                <p>Vaseline® Lip Care®<br />Aloe Fresh</p>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/lipcaretotalmoisture.png"
+                  alt="Total Moisture"
+                />
+                <p>Vaseline® Lip Care®<br />Total Moisture</p>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/lipcarecocoabutter.png"
+                  alt="Cocoa Butter"
+                />
+                <p>Vaseline® Lip Care®<br />Cocoa Butter</p>
+                <div class="rating">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/Vaseline.png"
+                  alt="Protecting Jelly"
+                />
+                <p>Vaseline® Skin<br />Protecting Jelly</p>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/SPF50.png"
+                  alt="Protection SPF 50 Lotion"
+                />
+                <p>
+                  Vaseline® Daily Sun<br />Protection SPF 50 Lotion
+                </p>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/DeepRestore.png"
+                  alt="Deep Restore Lotion"
+                />
+                <p>
+                  Vaseline® Intensive Care<br />Deep Restore Lotion
+                </p>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+              <div class="product-item">
+                <img
+                  src="../public/assets/products images/aloeFresh.png"
+                  alt="Aloe Fewsh Lotion"
+                />
+                <p>
+                  Vaseline® Intensive Care<br />Aloe Fresh Lotion
+                </p>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <button class="out-of-stock">OUT OF STOCK</button>
+              </div>
+            </div>
+            <div class="showmore">
+                  <h2><a href="Show More">Show More</a><img src="../public/assets/products images/back button.svg" alt=""></h2>
+            </div>
         </div>
     </div>
 
@@ -228,7 +236,76 @@
       </div>
     </section2>
 
-    <!-- hero 3 -->
+      <!-- slider -->
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active slider">
+                <div class="row-container">
+                    <div class="content1">
+                        <div class="simg">
+                            <img class="d-block w-100" src="../public/assets/products images/slide1.jpg" alt="First slide">
+                        </div>
+                        <div class="stext">
+                            <h2>Dry itchy Skin Rekif</h2>
+                            <p>Skin can dry out - here's how to relieve the itch.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                    <div class="content2">
+                        <div class="simg">
+                            <img class="d-block w-100" src="../public/assets/products images/slide2.jpg" alt="First slide">
+                        </div>
+                        <div class="stext">
+                            <h2>Cocoa Butter and Shea Butter Benefits</h2>
+                            <p>Scars, stretch marks & remoisturizing: shea and cocoa butter have many benefits.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          <div class="carousel-item">
+            <div class="row-container">
+                <div class="content1">
+                    <div class="simg">
+                        <img class="d-block w-100" src="../public/assets/products images/slide3.jpg" alt="second slide">
+                    </div>
+                    <div class="stext">
+                        <h2>How to Soothe a Sunburn</h2>
+                        <p>Drink water, apply Vaseline® Healing Jelly & more ways to handle a sunburn._x000D_</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="simg">
+                        <img class="d-block w-100" src="../public/assets/products images/slide4.jpg" alt="second slide">
+                    </div>
+                    <div class="stext">
+                        <h2>What is Petroleum Jelly, and What is It Used For?</h2>
+                        <p>Petroleum jelly heals dryness & sensitivity, but its origins may surprise you</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- hero 3 -->
     <div class="hero3">
         <div class="hero3-content">
           <div class="hero3header">
@@ -249,7 +326,10 @@
         <div class="hero3-image">
           <img src="../public/assets/products images/motherphoto.jpg" alt="Happy family promoting healthy skin" />
         </div>
-      </div>
-      <div class="divider"></div>
+    </div>
+    <div class="divider"></div>
+
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   </body>
 </html>
