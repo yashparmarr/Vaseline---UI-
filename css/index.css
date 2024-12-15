@@ -1,0 +1,244 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.flex-card {
+  display: flex;
+}
+body {
+  font-family: Open Sans, Arial, sans-serif;
+}
+
+/* header part  */
+
+.head {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+/* 1st information part  */
+
+.information {
+  height: 6vh;
+  gap: 30px;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(3, 3, 61), #090979);
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 100px;
+  color: white;
+}
+
+.information > p {
+  border-bottom: 2px solid transparent;
+}
+
+.information > p:hover {
+  border-bottom: 2px solid white;
+}
+/* 2nd navbar part */
+
+.logo {
+  width: 92px;
+  height: 66px;
+}
+
+.navbar {
+  /* background-color: aqua; */
+  height: 12vh;
+  width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-list {
+  height: 100%;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 3px;
+  position: relative;
+  font-size: 18px;
+}
+
+.navbar-list > .li-img {
+  color: #090979;
+}
+.li-img {
+  height: 100%;
+  align-items: center;
+  background-image: linear-gradient(0deg, #000, #000);
+  background-size: 0% 4px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+}
+
+.li-img:hover {
+  background-size: 100% 4px;
+}
+
+.li-img > img {
+  height: 16px;
+  width: 20px;
+  transform: rotate(-90deg);
+  margin-left: 2px;
+  transition: transform 0.4s ease;
+}
+
+.li-img:hover > img {
+  height: 16px;
+  width: 20px;
+  transform: rotate(90deg);
+  margin-left: 3px;
+}
+
+.searchBox {
+  height: 40px;
+  width: 150px;
+  border: 1px solid hsla(0, 0%, 0%, 0.16);
+  padding: 6px 11px;
+  background-color: white;
+  margin-left: auto;
+}
+
+.searchBox > .searchButton {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background-color: white;
+}
+.searchBox > button > .search-text {
+  border: none;
+}
+
+.searchBox > button > .searchIcon {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}
+
+/* main container start  */
+
+/* section one images */
+.section1 {
+  height: 68vh;
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px; /* Create space for the border */
+  background-image: linear-gradient(90deg, #dac687, #f2ebc8, #d7c27f);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 20px;
+}
+
+.section1 > div:first-child {
+  height: 100%;
+  width: 50vw;
+  padding: 20px 26px 10px 75px;
+  background: linear-gradient(90deg, rgb(9, 20, 39), rgb(22, 43, 76));
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+}
+
+.section1 > div:first-child > h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  margin: 16px 0 0;
+}
+
+.section1 > div:first-child > p {
+  font-size: 18px;
+  pad: 25px 0 0;
+}
+.section1 > div:first-child > a {
+  margin: 0 0 10;
+  width: 45%;
+  background-color: white;
+  align-items: center;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.section1 > div:first-child > a > p {
+  padding: 10px 10px;
+  color: rgb(22, 43, 76);
+  font-weight: 80px;
+  border-bottom: none;
+}
+
+.section1 > div:first-child > a > img {
+  height: 16px;
+  width: 20px;
+  transform: rotate(180deg);
+  visibility: hidden;
+  transition: transform 0.4s ease;
+}
+.section1 > div:first-child > a:hover > img {
+  visibility: visible;
+}
+.section1 > div:last-child {
+  height: 100%;
+  width: 47vw;
+}
+
+.section1 > div:last-child > img {
+  height: 100%;
+  width: 50vw;
+}
+
+/* section-2 */
+
+.section2 {
+    height: 45vh;
+    width: 100vw;
+  }
+
+  .section2-div {
+    height: 100%;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-left: 14%;
+    margin-bottom: 0;
+    color: #103167;
+  }
+
+  .section2-div > h2 {
+    font-size: 42px;
+  }
+
+  .section2-div > h2::after {
+    background: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
+    content: "";
+    display: block;
+    height: 5px;
+    left: 50%;
+    margin: 15px 0 25px;
+    position: absolute;
+    width: 80px;
+  }
+
+  .section2-div > p {
+    font-size: 18px;
+    color: rgba(39, 18, 18, 0.788);
+  }
+
+  .section2-div > a {
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .section2-div > a:hover {
+    border-bottom: 2px solid black;
+  }
