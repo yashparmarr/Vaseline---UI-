@@ -4,46 +4,236 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*  footer part */
+    </style>
   </head>
   <body>
-    <header>
+    <!-- header section -->
+    <header class="head">
+      <!-- information section -->
       <div class="flex-card information">
         <p>Sign up to our Newsletter</p>
         <p>Get in Touch</p>
         <p>FAQ</p>
       </div>
 
+      <!-- navbar section -->
       <nav class="flex-card navbar">
         <a href="index.html"
-          ><img class="logo"
+          ><img
+            class="logo"
             src="public/assets/Landing Page Images/logo.png"
             alt="Home Page"
         /></a>
-        <ul class="flex-card navbar-list ">
-            <div class="flex-card li-img">
-                <li>Products</li>
-                <img src="public/assets/Landing Page Images/back button.svg" alt="">
-            </div>
-            <div class="flex-card li-img">
-                <li>Articles</li>
-                <img src="public/assets/Landing Page Images/back button.svg" alt="">
-            </div>
-            <div class="flex-card li-img">
-                <li>About Vaseline</li>  
-                <img src="public/assets/Landing Page Images/back button.svg" alt="">
-            </div>
-            <div class="flex-card li-img">
-                <li>Skin Health for All</li>
-            </div>
+        <ul class="flex-card navbar-list">
+          <div class="flex-card li-img">
+            <li>
+              <a
+                style="text-decoration: none"
+                href="src/products.html"
+                name="Products"
+                alt="products"
+                >Products</a
+              >
+            </li>
+            <img
+              src="public/assets/Landing Page Images/back button.svg"
+              alt=""
+            />
+          </div>
+          <div class="flex-card li-img">
+            <li>
+              <a
+                style="text-decoration: none"
+                href="src/articles.html"
+                alt="Article"
+                name="articles"
+                >Articles</a
+              >
+            </li>
+            <img
+              src="public/assets/Landing Page Images/back button.svg"
+              alt=""
+            />
+          </div>
+          <div class="flex-card li-img">
+            <li>
+              <a
+                style="text-decoration: none"
+                href="src/about.html"
+                alt="About"
+                name="about"
+                >About Vaseline</a
+              >
+            </li>
+            <img
+              src="public/assets/Landing Page Images/back button.svg"
+              alt=""
+            />
+          </div>
+          <div class="flex-card li-img">
+            <li>
+              <a
+                style="text-decoration: none"
+                href="src/skinhealth.html"
+                alt="Skinhealth"
+                name="skinhealth"
+                >Skin Health for All</a
+              >
+            </li>
+          </div>
         </ul>
+        <!-- ṣearch-box -->
         <div class="searchBox">
-            <button class="flex-card searchButton" role="search" name="Search" placeholder="">
-                <span class="search-text">Search</span>
-                <span class="searchIcon"><img src="public/assets/Landing Page Images/search-icon.svg" alt="Search"></span>
-            </button>
+          <button
+            class="flex-card searchButton"
+            role="search"
+            name="Search"
+            placeholder=""
+          >
+            <span class="search-text">Search</span>
+            <span class="searchIcon"
+              ><img
+                src="public/assets/Landing Page Images/search-icon.svg"
+                alt="Search"
+            /></span>
+          </button>
         </div>
       </nav>
     </header>
+
+    <!-- header section end-->
+
+    <!-- main container start -->
+    <main class="main-container">
+      <!-- section-1 images  -->
+      <section class="flex-card section1">
+        <div class="flex-card">
+          <h1>Reach for amazing skin.</h1>
+          <p>Enjoy noticeably healthier skin.</p>
+          <a class="flex-card" href="">
+            <p>HEAL DRY SKIN NOW</p>
+            <img
+              src="public/assets/Landing Page Images/back button.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div>
+          <img src="/public/assets/Landing Page Images/vaseline-1.jpg" alt="" />
+        </div>
+      </section>
+
+      <!-- section-2 -->
+      <section class="section2">
+        <div class="flex-card section2-div">
+          <h2>BEAUTIFUL SKIN IS HEALTHY SKIN.</h2>
+          <p>
+            We want to give every body healthy skin. And when we say every body,
+            we mean it. No matter your age, gender, or ethnicity, <br />
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            we are here for you. Your journey to beautiful, healthy skin starts
+            with Vaseline®.
+          </p>
+          <a href="" role="link" name="Find your favourite Vaseline® product"
+            >Find your favourite Vaseline® product
+          </a>
+        </div>
+      </section>
+
+      <!-- section-3 -->
+      <section class="section3-carousel">
+        <div class="flex-card carousel-card">
+          <div class="flex-card card-link">
+            <a href="">
+              <img src="public/assets/Landing Page Images/1634470.png" alt="" />
+            </a>
+            <div class="card-items-details">
+              <h3 class="card-title">
+                Vaseline Sun + Pollution Protection SPF 30 Body Lotion
+              </h3>
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
+          </div>
+          <div class="flex-card card-link">
+            <a href="">
+              <img src="public/assets/Landing Page Images/1627950.png" alt="" />
+            </a>
+            <div class="card-items-details">
+              <h3 class="card-title">
+                Vaseline Sun + Pollution Protection SPF 30 Body Lotion
+              </h3>
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
+          </div>
+          <div class="flex-card card-link">
+            <a href="">
+              <img src="public/assets/Landing Page Images/1501197.png" alt="" />
+            </a>
+            <div class="card-items-details">
+              <a href=""
+                ><h3 class="card-title">
+                  Vaseline Sun + Pollution Protection SPF 30 Body Lotion
+                </h3></a
+              >
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
+          </div>
+          <div class="flex-card card-link">
+            <a href="">
+              <img src="public/assets/Landing Page Images/1634470.png" alt="" />
+            </a>
+            <div class="card-items-details">
+              <h3 class="card-title">
+                Vaseline Sun + Pollution Protection SPF 30 Body Lotion
+              </h3>
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-4 -->
+      <section class="section4-div"></section>
+
+      <!-- section-5 -->
+      <section class="flex-card section-5-banner">
+        <div class="flex-card section-5-main-div">
+          <div class="section-5-main-left">
+            <img
+              src="public/assets/Landing Page Images/102988572 (1).jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex-card section-5-main-right">
+            <p class="_1stpara">The Vaseline® Healing Project</p>
+            <div class="flex-card section-5-heading">
+              <div class="section-5-sideline"></div>
+              <h1>Skin Health For All</h1>
+            </div>
+            <p class="_2ndpara">
+              We believe skin health is a right, not a privilege. That's why we
+              are on a mission toward making skin health more accessible to
+              everyone, everywhere.
+            </p>
+            <div class="flex-card section-5-button">
+              <a href="">DISCOVER MORE</a>
+              <img
+                src="public/assets/Landing Page Images/back button.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
