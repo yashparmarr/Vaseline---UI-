@@ -384,7 +384,6 @@ hr.underline {
   background-color: #ffffff;
   border-bottom: 7px solid transparent ;
   margin-right: 22px;
- 
   
 }
 .product-item:hover{
@@ -404,6 +403,7 @@ hr.underline {
   color: #103167;
   font-size: 1.125rem;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .product-item img {
@@ -412,6 +412,7 @@ hr.underline {
   margin: 0 auto;
   width: 150px;
   height: auto;
+  cursor: pointer;
 }
 
 .rating {
@@ -424,8 +425,6 @@ hr.underline {
 }
 
 .out-of-stock {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #002d5e;
@@ -439,6 +438,14 @@ hr.underline {
   width: 100%;
   box-sizing: border-box;
   min-width: 180px;
+}
+.out-of-stock > img{
+  fill: #2196F3;
+  height: 16px;
+  width: 20px;
+  transform: rotate(180deg);
+  opacity: 1;
+  color: #1c355b;
 }
 /* show more */
 
@@ -601,22 +608,23 @@ hr.underline {
   
 }
 .read-more2{
-  
+  color: #1c355b;
 }
 .read-more2 a{
   font-size: 1.2rem;
-  color: #1c355b; /* Blue color */
+   /* Blue color */
+   color: #1c355b;
   text-decoration: none;
   font-weight: bold;
+  display: inline-flex;
+  align-items: center;
 }
 .read-more2 img{
-  border-right: 3px solid #1c355b;
-    border-top: 3px solid #1c355b;
-    display: inline-block;
-    height: 8px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    max-width: 80px;
+  height: 16px;
+  width: 20px;
+  transform: rotate(180deg);
+  opacity: 1;
+  color: #1c355b;
 }
 
 
