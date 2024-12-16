@@ -22,10 +22,10 @@ body {
 /* 1st information part  */
 
 .information {
-  height: 6vh;
+  height: 5vh;
   gap: 30px;
   width: 100%;
-  background: linear-gradient(90deg, rgb(3, 3, 61), #090979);
+  background: linear-gradient(90deg, rgb(9, 20, 39), rgb(22, 43, 76));
   align-items: center;
   justify-content: flex-end;
   padding: 0 100px;
@@ -181,7 +181,6 @@ body {
   width: 20px;
   transform: rotate(180deg);
   visibility: hidden;
-  
   transition: transform 0.4s ease;
 }
 .section1 > div:first-child > a:hover > img {
