@@ -16,6 +16,7 @@ body {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index : 20 ;
 }
 
 /* 1st information part  */
@@ -38,6 +39,7 @@ body {
 .information > p:hover {
   border-bottom: 2px solid white;
 }
+
 /* 2nd navbar part */
 
 .logo {
@@ -130,7 +132,7 @@ body {
   height: 68vh;
   width: 100%;
   position: relative;
-  padding-bottom: 20px; /* Create space for the border */
+  padding-bottom: 20px; 
   background-image: linear-gradient(90deg, #dac687, #f2ebc8, #d7c27f);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -179,6 +181,7 @@ body {
   width: 20px;
   transform: rotate(180deg);
   visibility: hidden;
+  
   transition: transform 0.4s ease;
 }
 .section1 > div:first-child > a:hover > img {
@@ -186,7 +189,7 @@ body {
 }
 .section1 > div:last-child {
   height: 100%;
-  width: 47vw;
+  width: 50vw;
 }
 
 .section1 > div:last-child > img {
@@ -241,4 +244,61 @@ body {
 
   .section2-div > a:hover {
     border-bottom: 2px solid black;
+  }
+
+  /*  section-3 carousel */
+
+  .section3-carousel {
+    height: 90.1vh;
+    width: 100%;
+    background-color: transparent;
+  }
+  .carousel-card {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+  .carousel-card > div {
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+    height: 100%;
+  }
+  .carousel-card > div img {
+    height: 290px;
+    width: 290px;
+  }
+
+  .card-link {
+    width: calc(100% / 4 - 20px);
+    max-width: 290px;
+    height: 49.1vh;
+    align-items: center;
+  }
+
+  .card-link:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .card-items-details {
+    width: 290px;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 20px;
+    background-image: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 20px;
+  }
+  .card-title {
+    padding: 10px;
+  }
+  .rating {
+    padding-left: 30px;
+    width: 270px;
+    height: 69px;
+    color: #d7c27f;
+    font-size: 40px;
   }
