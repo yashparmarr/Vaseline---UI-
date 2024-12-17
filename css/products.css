@@ -274,20 +274,48 @@ hr.underline {
 }
 /* Filter Section */
 .filter-section {
-    float: left;
-    width: 20%;
-    padding: 20px; /* Adds padding inside the filter section */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-     background-color: #ffffff
-    border-radius: 5px; /* Rounds the corners */
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+  flex: 0 0 20%;
+  padding: 20px 30px;
+  background-color: #ffffff;
+
 }
 .filter-section h3 {
     font-size: 14px;
     margin-bottom: 10px;
     color: #130167; /* Darker text color */
+    font-weight: bold;
+
 }
+
+.filter-section > h3 > a{
+  color: #1c355b;
+  text-decoration: none;
+  font-weight: 400;
+  padding-left: 20%;
+}
+.filter-boder {
+  border-top: 1px solid #bdbdbd;
+  margin-top: 10px
+}
+.filter-boder > h4 {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  padding: 10px 0px;
+}
+
+.input {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  color: #666666;
+}
+
 .input input {
   position: absolute;
   opacity: 0;
