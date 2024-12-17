@@ -176,6 +176,7 @@ body {
     -webkit-background-clip: text;
     color: #fff;
     padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 .wrapper {
@@ -191,6 +192,7 @@ body {
     font-size: 1.125rem;
     line-height: 1.75rem;
     color: #ffffff;
+    padding-top: 10px;
 }
 
 /* Right Section */
