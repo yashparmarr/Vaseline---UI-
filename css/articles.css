@@ -5,21 +5,28 @@
   font-family: "Open Sans", sans-serif;
 }
 .banner {
-  display: flex;
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between the two containers */
+  align-items: stretch; /* Ensure equal height for children */
   width: 100%;
+  max-width: 100vw; /* Limit the overall width */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 0; /* Padding around the section */
+  color: #fff;
 }
 .banner-content {
-  width: 50%;
-  height: auto;
+  flex: 1; /* Grow to take up 50% space */
+  padding: 20px 20px 20px 80px;
+  text-align: left; /* Align text to the left */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
   background-image: linear-gradient(
     to right,
-    #0f2c51 50%,
+    #0f2c51 70%,
     #0f2c51 0%,
     #0f3b75 100%
   );
-  color: #f9f5e5;
-  font-size: 14px;
-  padding: 20px 25.6px 10px;
 }
 .banner-title {
   font-size: 3.125rem;
@@ -39,15 +46,18 @@
   padding: 25px 0 0;
 }
 .banner-image-container {
-  text-align: right;
-  width: 50%;
-  /* height: 287px; */
+  flex: 1; /* Grow to take up 50% space */
+  display: flex;
 }
 .banner-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  width: 100%; /* Fill the container's width */
+  height: 100%; /* Match the height of the left container */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+.breadcrumbs {
+  position: absolute;
+  top: 10px;
+  font-size: 14px;
 }
 .breadcrumbs > a {
   text-decoration: underline;
@@ -57,7 +67,7 @@
 .breadcrumbs > a:hover {
   text-decoration: none;
 }
-.banner-below-bar {
+.below-bar {
   width: 100vw;
   height: 15px;
   background: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
@@ -94,82 +104,96 @@
   height: 5px;
   width: 80px;
   margin: 15px 0 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Article Container and Layout */
 .article-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping of filter and articles */
 }
 
 /* Filters Section */
 .article-filters {
-    grid-row: 1 / 4; /* Filters span 3 rows */
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  flex: 0 0 20%; /* Fixed width of 20% for the filter column */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 100%; /* Full height */
 }
 
 .article-filters h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #103167;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #103167;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
 }
 
 .article-filters ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .article-filters li {
-    margin: 8px 0;
-    display: flex;
-    align-items: center;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
 }
 
 .article-filters input[type="checkbox"] {
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 .article-filters label {
-    font-size: 0.95em;
-    color: #333;
-    cursor: pointer;
+  font-size: 0.95em;
+  color: #333;
+  cursor: pointer;
 }
 
 .article-filters strong {
-    font-size: 1em;
-    margin-top: 15px;
-    display: block;
-    font-weight: bold;
-    color: #444;
+  font-size: 1em;
+  margin-top: 15px;
+  display: block;
+  font-weight: bold;
+  color: #444;
 }
-
 
 /* Article Grid Section */
 .article-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
+  flex: 1; /* Takes up the remaining space */
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Ensure space for button */
 }
 
 /* Article Items */
 .article-item {
+  width: 30%; /* 3 items per row */
   background-color: #fff;
   padding: 10px;
   text-align: left;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* border: 1px solid #ddd; */
+  overflow: hidden;
+}
+
+/* Hover Effect for Article Items */
+.article-item:hover {
+  transform: translateY(-10px); /* Lifts the item slightly */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Adds a shadow */
 }
 
 .article-item img {
@@ -178,32 +202,383 @@
   object-fit: cover;
 }
 
-.article-item h3 {
+.article-item-heading {
   font-size: 1.25rem;
-  font-style: normal;
   font-weight: 700;
   line-height: 1.875rem;
   color: #103167;
   margin: 10px 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .article-item p {
   color: #666;
   font-size: 1rem;
   line-height: 1.625rem;
-  font-style: normal;
-  font-weight: 400;
 }
 
-.article-item a {
+.article-read-more {
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
   color: #1c355b;
   font-size: 1.125rem;
-  letter-spacing: 0.35px;
-  line-height: 1.875rem;
+  font-weight: 700;
+}
+
+/* Hover Effect for "Read More" Link */
+.article-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #1c355b;
+  font-size: 1.125rem;
+  font-weight: 700;
+  position: relative; /* Needed for pseudo-elements */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.article-read-more::after {
+  content: ">";
+  display: inline-block;
+  margin-left: 2px;
+  transition: transform 0.3s ease, content 0.3s ease; /* Smooth arrow rotation and content change */
+}
+
+.article-read-more:hover {
+  color: #103167; /* Darker shade on hover */
+}
+
+.article-read-more:hover::after {
+  content: "v"; /* Change to downward arrow */
+  transform: rotate(360deg); /* Maintain alignment for 'v' */
+}
+
+/* Button Styling */
+.article-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Ensure space above the button */
+}
+
+/* Load More Button Styling */
+.load-more {
+  padding: 0.75rem 1.5rem;
+  background-color: #1c355b;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  min-width: 250px;
+  transition: background-color 0.3s ease;
+  position: relative; /* Needed for the pseudo-element */
+}
+
+/* Add arrow on hover */
+.load-more::before {
+  content: ">"; /* Arrow appears */
+  position: absolute;
+  left: 172px; /* Adjust position as needed */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.1s ease, transform 0.3s ease;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Hover effect for Load More */
+.load-more:hover {
+  background-color: #103167; /* Darken background */
+}
+
+.load-more:hover::before {
+  opacity: 1; /* Make arrow visible */
+  transform: translateX(5px); /* Slight movement effect */
+}
+
+/* Section Styling */
+.related-products {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.related-products h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.carousel-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background-color: #1c355b;
+  border-radius: 10px;
+}
+
+.product-card {
+  flex: 0 0 calc(25% - 20px);
+  background-color: #fff;
+  text-align: center;
+  scroll-snap-align: start;
+  padding: 20px 10px;
+  position: relative; /* Ensure positioning for pseudo-element */
+
+  overflow: hidden; /* Prevent overflow */
+}
+
+.product-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  left: 0;
+  width: 100%; /* Full width */
+  height: 10px; /* Border height */
+  background: linear-gradient(
+    90deg,
+    #d6c07c,
+    #f7f2d4 52.6%,
+    #d6c07c
+  ); /* Linear gradient */
+  display: none; /* Initially hidden */
+}
+
+.product-card:hover::after {
+  display: block; /* Show border on hover */
+}
+
+.product-card:hover {
+  box-shadow: -10px 0 10px -15px rgba(0, 0, 0, 0.2),
+    /* Left shadow */ 10px 0 10px -15px rgba(0, 0, 0, 0.2); /* Right shadow */
+}
+.product-card img {
+  width: 270px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  color: #103167;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  min-height: 81px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+.product-card p {
+  height: 76px;
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #8c8c8c;
+  line-height: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Rating Container */
+.rating {
+  display: inline-block;
+  font-size: 2rem; /* Adjust the size of stars */
+  color: #ccc; /* Gray color for inactive stars */
+  position: relative;
+}
+
+.rating::before {
+  content: "★★★★★"; /* Default 5 stars */
+  color: #ccc; /* Gray color for inactive stars */
+  display: block;
+}
+
+/* Colored Stars */
+.rating::after {
+  content: "★★★★☆"; /* Add stars as needed */
+  color: #d5bf7b; /* Gold color for active stars */
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: calc(var(--rating) / 5 * 100%);
+}
+
+.buy-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #1c355b;
+  color: white;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: 40px;
+  cursor: pointer;
+  min-width: 230px;
+  transition: background-color 0.3s ease;
+  position: relative; /* Needed for the pseudo-element */
+}
+
+/* Add arrow on hover */
+.buy-btn::before {
+  content: ">"; /* Arrow appears */
+  position: absolute;
+  left: 150px; /* Adjust position as needed */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.1s ease, transform 0.3s ease;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Hover effect */
+.buy-btn:hover {
+  background-color: #103167; /* Darken background */
+}
+
+.buy-btn:hover::before {
+  opacity: 1; /* Make arrow visible */
+  transform: translateX(5px); /* Slight movement effect */
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background-color: #002244;
+}
+
+/* Split Section Container */
+.split-section {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between the two containers */
+  align-items: stretch; /* Ensure equal height for children */
+  width: 100%;
+  max-width: 100vw; /* Limit the overall width */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 0; /* Padding around the section */
+}
+
+/* Left Text Container */
+.split-text {
+  flex: 1; /* Grow to take up 50% space */
+  padding: 20px 20px 20px 80px;
+  text-align: left; /* Align text to the left */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  background-image: linear-gradient(
+    to right,
+    #0f2c51 70%,
+    #0f2c51 0%,
+    #0f3b75 100%
+  );
+}
+.split-text-head {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #e5e5e5;
+  padding-left: 42px;
+}
+.split-text h2 {
+  color: #fff;
+  display: flex;
+  font-size: 2.625rem;
+  line-height: 3.4375rem;
+  margin-top: 0;
+  text-align: left;
   font-style: normal;
   font-weight: 700;
+}
+
+.split-text p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #fff;
+  margin-bottom: 20px;
+  padding-top: 25px;
+}
+
+.split-text button {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: #1c355b;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  width: 250px;
+  min-width: 250px;
+  transition: background-color 0.3s ease;
+  position: relative; /* Needed for the pseudo-element */
+}
+
+/* Add arrow on hover */
+.split-text button::before {
+  content: ">"; /* Arrow appears */
+  position: absolute;
+  left: 174px; /* Adjust position as needed */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.1s ease, transform 0.3s ease;
+  color: #1c355b;
+  font-size: 1rem;
+}
+
+/* Hover effect for Load More */
+.split-text button:hover {
+  background-color: white; /* Darken background */
+}
+
+.split-text button:hover::before {
+  opacity: 1; /* Make arrow visible */
+  transform: translateX(5px); /* Slight movement effect */
+}
+
+/* Right Image Container */
+.split-image {
+  flex: 1; /* Grow to take up 50% space */
+  display: flex;
+}
+
+.split-image img {
+  width: 100%; /* Fill the container's width */
+  height: 100%; /* Match the height of the left container */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
 }
