@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255) ;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        /* Search Section */
+        .search-header {
+            background: linear-gradient(60deg, #060e1e, #1c355b 58%);
+            padding: 30px;
+            padding-left: 180px;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .search-header > img:first-child{
+            height: 50px;
+        }
+        .search-header > img:last-child{
+            height: 20px;
+            padding-left: 180px;
+        }
+
+        .search-header input {
+            width: 100%;
+            max-width: 700px;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            font-weight: bold;
+            /* border-radius: 5px; */
+            background-color: transparent;
+
+            
+        }
+
+        .search-header input::placeholder {
+            color: #fff;
+            
+        }
+
+        .search-header input:focus {
+            border: 2px solid #133d5b;
+
+        }
+
+        /* Suggestions Section */
+        .suggestions-container {
+            margin: 20px 180px;
+            max-width: 600px;
+            
+        }
+
+        .suggestions-container h2 {
+            font-size: 24px;
+            color: #0b2647;
+            margin-bottom: 10px;
+        }
+
+        .suggestions-container p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #555;
+            cursor: pointer;
+            line-height: 2.15;
+        }
+
+        .suggestions-container p:hover {
+            text-decoration: underline;
+            /* color: #0b2647; */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Search Bar Section -->
+    <div class="search-header">
+        <img src="../public/assets/searchbar/search.svg" alt="">
+        <input type="text" placeholder="What are you looking for?" />
+        <img src="../public/assets/searchbar/ot_close.svg" alt="">
+    </div>
+
+    <!-- Suggestions Section -->
+    <div class="suggestions-container">
+        <h2>Hello, what are you looking for?</h2>
+        <p>Cocoa Radiant Lotion</p>
+        <p>Protecting Jelly</p>
+        <p>Lotion for dry skin</p>
+        <p>What is Protecting Jelly</p>
+    </div>
+</body>
+</html>
