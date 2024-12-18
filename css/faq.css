@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255) ;
+  font-family: "Open Sans", sans-serif;
+  cursor:default;
+}
+
+.hero-section1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(60deg, #060e1e, #1c355b 58%);
+    color: #fff;
+    
+    overflow: hidden;
+  
+  }
+  
+  
+  
+  /* Left Section */
+  .left-side {
+    flex: 1;
+    max-width: 50%;
+    
+  }
+  
+  .left-side .home {
+    font-size: 14px;
+    color: #ccc;
+    
+    padding-top:10px ;
+    padding-left: 6%;
+  }
+  
+  .left-side .home a { 
+    color: #ccc;
+    
+  }
+  
+  .left-side .home span {
+    color: #fff;
+  }
+  .left-side .home a:hover {
+      text-decoration: none;
+  }
+  
+  .left-side h1 {
+    font-size: 3.125rem;
+    
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+    -webkit-text-fill-color: transparent;
+      background: linear-gradient(88.15deg, #f7f2d4 .27%, #d6c07c 93.77%);
+      -webkit-background-clip: text;
+      color: #fff;
+    padding-top: 15%;
+    padding-left: 15%;
+  }
+  .wrapper{
+    padding-left: calc(50vw - 97% + 85px);
+  }
+  
+  .left-side p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #ffffff; 
+    padding-left: 15%;
+  }
+  
+  /* Right Section */
+  .right-side {
+    flex: 1;
+    
+  }
+  
+  .right-side img {
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .divider {
+    height: 15px;
+    width: 100%;
+    background: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
+  }
+.content{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.content p{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 20px;
+    color: #666;
+    width: 990px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1030px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* container 1 is start */
+
+section {
+    margin: 0 auto;
+    max-width: 1290px;
+}
+
+.faq-item {
+  margin: 10px 0;
+    background-image: linear-gradient(180deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 10px 100%; 
+    padding-left: 11px; 
+}
+
+.faq-btn {
+    width: 100%;
+    background: linear-gradient(60deg, #060e1e, #1c355b 58%); 
+    color: #ffffff; /* White text */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 18px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+        letter-spacing: 0.2px;
+        line-height: 2.0625rem;
+        line-height: 2.625rem;
+}
+
+.faq-btn::after {
+    content: "+"; /* Plus icon */
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+
+.additional-info {
+    /* font-size: 12px; */
+    color: #555;
+    /* line-height: 1.5; */
+    font-size: .875rem !important;
+        line-height: 1.3125rem !important;
+        margin-top: 50px;
+        margin-left: 11px ;
+        margin-bottom: 50px;
+  }
+
+.hero-section2 {
+    background: linear-gradient(60deg, #060e1e, #1c355b 58%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+.left-side2 h1 {
+    color: #fff;
+    font-size: 2.125rem;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+  }
+.hero3{
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    color: #103167;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 50px;
+    line-height: 1.375rem;
+    margin: auto 100px 20px;
+    min-width: 250px;
+    text-align: center;
+    width: auto;
+}
+.hero3 > img {
+  
+    height: 12px;
+    width: 20px;
+    transform: rotate(180deg);
+    /* transition: opacity 0.4s ease, transform 0.4s ease; */
+    opacity: 0;
+    
+  }
+  .hero3:hover img {
+    opacity: 1;
+    
+  }
