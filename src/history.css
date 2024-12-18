@@ -149,6 +149,120 @@ body {
 
 /* Article section end.............................. */
 
+.timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  /* Vertical Line */
+  .timeline-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline Items */
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+    text-align: left;
+  }
+  
+  /* Yellow Connector Dot */
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -12px;
+    width: 32px;
+    height: 12px;
+    background: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
+    border-radius: 50%;
+    border: 3px solid white;
+    z-index: 1;
+  }
+ .timeline-point::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* Align to the right of the circle */
+  width: 50px; /* Length of the horizontal line */
+  height: 3px;
+  background-color: #d1b96a;
+  transform: translateY(-50%); /* Center the line vertically */
+}
+
+  
+  .timeline-item.right::before {
+    left: -12px;
+  }
+  
+  /* Timeline Year */
+  .timeline-year {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #103167;
+    margin-bottom: 10px;
+  }
+  
+  /* Event Content */
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+    /* background: white; */
+    padding: 15px;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .event-image {
+    width: 500px;
+    height: auto;
+    margin: 0 auto 15px;
+    /* display: block; */
+  }
+  
+  .event-title {
+    font-size: 22px;
+    color: #002f6c;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .event-description {
+    color: #666 !important;
+    font-size: 1.2em !important;
+    font-weight: lighter !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .read-more {
+    color: #666;
+    text-decoration: none;
+    font-size: 1.125rem;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
 /* Blog container - Centers the content */
 .blog-container {
     padding-top: 60px;
