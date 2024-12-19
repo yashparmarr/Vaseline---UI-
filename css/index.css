@@ -846,11 +846,17 @@ body {
   align-items: center;
 }
 
+
 .card-link:hover {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
+.card-link > a > img {
+   width : 100% ;
+}
+
 .card-items-details {
   width: 290px;
   padding: 10px;
@@ -863,8 +869,9 @@ body {
 }
 
 .card-items-details > a {
-  text-decoration: none
+  text-decoration: none;
 }
+
  
 .card-title {
   padding: 10px;
