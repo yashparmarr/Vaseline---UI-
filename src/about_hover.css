@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {}
+
+body {
+    font-family: Open Sans, Arial, sans-serif;
+    /* overflow-x: hidden; */
+}
+.card_container{
+    display: flex;
+    justify-content:flex-start;
+    gap: 30px;
+    padding: 30px 20px;
+}
+a img{
+    border: 1px solid #e6e0e0;
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a h2{
+    font-size: 20px;
+    color: #102b58;
+    margin-top: 12px;
+   
+}
