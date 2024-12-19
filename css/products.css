@@ -139,8 +139,9 @@ body {
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  gap: 20px;
-  height: 500px;
+  /* gap: 20px; */
+  width: 100%;
+  height: 400px;
   background: linear-gradient(60deg, #060e1e, #1c355b 58%);
   color: #fff;
   
@@ -200,13 +201,14 @@ body {
 /* Right Section */
 .right {
   flex: 1;
-  
+  max-width: 50%;
+  overflow: hidden;
 }
 
 .right img {
   align-self: center;
   width: 100%;
-  height: 100%;
+  height: auto%;
   object-fit: cover;
 }
 
@@ -687,7 +689,7 @@ hr.underline {
     justify-content: space-around;
     padding-left: calc(50vw - 50% + 85px);
   flex: 1;
-  /* max-width: 553.4rem; */
+  max-width: 50%;
   background: linear-gradient(60deg, #060e1e, #1c355b 58%);
 }
 .hero3header{
@@ -723,7 +725,9 @@ hr.underline {
   font-size: 1.125rem;
   line-height: 1.75rem;
   margin-bottom: 30px;
+  max-width: 95%;
   color: white;
+
 }
 
 .hero3-button {
@@ -762,6 +766,7 @@ hr.underline {
 .hero3-image {
   flex: 1;
   overflow: hidden;
+  max-width: 50%;
 }
 
 .hero3-image img {
