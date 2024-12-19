@@ -181,11 +181,12 @@ body {
   object-fit: cover; /* Ensure the image covers the container without distortion */
 }
 .breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   position: relative;
-  top: -80px;
-  font-size: 14px;
+  top: 30px;
+  left: 95px;
+  font-size: 12px;
+  color: white;
 }
 .breadcrumbs > a {
   text-decoration: underline;
@@ -454,9 +455,6 @@ body {
 .carousel-track {
   display: flex;
   gap: 20px;
-  /* overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; */
   padding-bottom: 10px;
 }
 
@@ -589,28 +587,6 @@ body {
   opacity: 1; /* Make arrow visible */
   transform: translateX(5px); /* Slight movement effect */
 }
-
-/* Navigation Buttons */
-/* .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #003366;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5em;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-btn:hover {
-  background-color: #002244;
-} */
 
 /* Pagination Dots */
 .pagination {
@@ -769,15 +745,6 @@ body {
 
 /* For tablets and medium screens (max-width: 1024px) */
 @media (max-width: 1024px) {
-  .information {
-    padding: 0 50px;
-    font-size: 0.9rem;
-  }
-
-  .navbar-list {
-    gap: 20px;
-    font-size: 16px;
-  }
 
   .banner-content {
     padding: 20px;
@@ -799,6 +766,27 @@ body {
 
 /* For small screens (max-width: 768px) */
 @media (max-width: 768px) {
+  .banner {
+    flex-direction: column-reverse;
+  }
+
+  .banner-content {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .breadcrumbs {
+    display: none;
+  }
+  .below-bar {
+    height: 10px;
+  }
+
   .article-container {
     flex-direction: column;
   }
@@ -816,43 +804,116 @@ body {
     width: calc(100% - 20px); /* Full width */
   }
 
-  .banner-content {
-    padding: 10px;
+  .article-item img {
+    height: auto;
+  }
+  .load-more {
+    width: 100%;
+  }
+  .load-more::before {
+    left: 410px;
+  }
+  .product-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+  .split-section {
+    flex-direction: column-reverse;
+  }
+  .split-text {
+    padding: 25px;
+  }
+  .split-text-head {
+    font-size: 14px;
+  }
+  .split-text h2 {
+    font-size: 35px;
+  }
+  .split-text p {
+    font-size: 16px;
+  }
+  .split-text button {
+    width: 100%;
+  }
+  .split-text button::before{
+  left: 410px;}
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .banner {
+    flex-direction: column-reverse;
   }
 
-  .banner-title {
-    font-size: 2rem;
-    line-height: 2.5rem;
+  .banner-content {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .breadcrumbs {
+    display: none;
+  }
+  .below-bar {
+    height: 10px;
   }
 
   .navbar-list {
     font-size: 14px;
     gap: 10px;
   }
-}
 
-/* For mobile screens (max-width: 480px) */
-@media (max-width: 480px) {
-  .information {
-    padding: 0 20px;
-    font-size: 0.8rem;
+  .article-container {
+    flex-direction: column;
   }
 
-  .navbar-list {
-    font-size: 12px;
+  .article-filters {
+    flex: 0 0 100%; /* Full width for filters */
+    margin-bottom: 20px;
+  }
+
+  .article-grid {
+    justify-content: center; /* Center items */
   }
 
   .article-item {
-    padding: 10px;
+    width: calc(100% - 20px); /* Full width */
   }
 
-  .banner-title {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .article-item img {
+    height: auto;
   }
-
   .load-more {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+    width: 100%;
   }
+  .load-more::before {
+    left: 410px;
+  }
+  .product-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+  .split-section {
+    flex-direction: column-reverse;
+  }
+  .split-text {
+    padding: 25px;
+  }
+  .split-text-head {
+    font-size: 14px;
+  }
+  .split-text h2 {
+    font-size: 35px;
+  }
+  .split-text p {
+    font-size: 16px;
+  }
+  .split-text button {
+    width: 100%;
+  }
+  .split-text button::before{
+  left: 410px;}
 }
+
