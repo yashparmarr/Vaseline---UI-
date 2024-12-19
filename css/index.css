@@ -836,7 +836,7 @@ body {
 }
 .carousel-card > div img {
   height: 290px;
-  width: 25%;
+  /* width: 25%; */
 }
 
 .card-link {
