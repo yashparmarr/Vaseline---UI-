@@ -14,3 +14,16 @@ window.addEventListener("scroll", () => {
 backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+document.querySelectorAll('.product-hovering').forEach((item) => {
+  item.addEventListener('mouseenter', () => {
+      const hoverContainer = item.querySelector('.hover-product-container');
+      hoverContainer.style.display = '';
+  });
+
+  item.addEventListener('mouseleave', () => {
+      const hoverContainer = item.querySelector('.hover-product-container');
+      hoverContainer.style.display = 'none';
+  });
+});
