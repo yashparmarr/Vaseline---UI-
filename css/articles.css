@@ -20,7 +20,7 @@ body {
   position: sticky;
   top: 0;
   background-color: white;
-  z-index : 20 ;
+  z-index: 20;
 }
 
 /* 1st information part  */
@@ -129,8 +129,9 @@ body {
   height: 25px;
 }
 
+/* Banner Section */
 .banner {
-  display: flex; /* Flexbox layout */
+  display: flex;
   justify-content: space-between; /* Space between the two containers */
   align-items: stretch; /* Ensure equal height for children */
   width: 100%;
@@ -180,9 +181,12 @@ body {
   object-fit: cover; /* Ensure the image covers the container without distortion */
 }
 .breadcrumbs {
-  position: absolute;
-  top: 10px;
-  font-size: 14px;
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 95px;
+  font-size: 12px;
+  color: white;
 }
 .breadcrumbs > a {
   text-decoration: underline;
@@ -192,11 +196,14 @@ body {
 .breadcrumbs > a:hover {
   text-decoration: none;
 }
+
 .below-bar {
-  width: 100vw;
+  width: 100%;
   height: 15px;
   background: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
 }
+
+/* Article Section */
 .articles-header {
   display: flex;
   flex-direction: column;
@@ -448,9 +455,6 @@ body {
 .carousel-track {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
 }
 
@@ -584,26 +588,30 @@ body {
   transform: translateX(5px); /* Slight movement effect */
 }
 
-/* Navigation Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #003366;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5em;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+/* Pagination Dots */
+.pagination {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
-.carousel-btn:hover {
-  background-color: #002244;
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+  background-color: #1c355b;
+}
+
+.pagination-dot:hover {
+  background-color: #1c355b;
 }
 
 /* Split Section Container */
@@ -648,6 +656,12 @@ body {
   text-align: left;
   font-style: normal;
   font-weight: 700;
+  position: relative;
+  background-image: linear-gradient(90deg, #d6c07c, #f7f2d4 52.6%, #d6c07c);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 5px 100%;
+  padding-left: 42px;
 }
 
 .split-text p {
@@ -707,3 +721,199 @@ body {
   height: 100%; /* Match the height of the left container */
   object-fit: cover; /* Ensure the image covers the container without distortion */
 }
+
+/* Back To Top Button */
+.back-to-top {
+  width: 35px;
+  height: 35px;
+  background-color: #1c355b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px white;
+  cursor: pointer;
+  font-size: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  position: fixed;
+  right: 2vw;
+  bottom: 5vh;
+}
+
+/* Media Queries */
+
+/* For tablets and medium screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+
+  .banner-content {
+    padding: 20px;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .article-item {
+    width: calc(50% - 20px); /* 2 items per row */
+  }
+
+  .article-filters {
+    flex: 0 0 30%; /* Filters take 30% width */
+  }
+}
+
+/* For small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column-reverse;
+  }
+
+  .banner-content {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .breadcrumbs {
+    display: none;
+  }
+  .below-bar {
+    height: 10px;
+  }
+
+  .article-container {
+    flex-direction: column;
+  }
+
+  .article-filters {
+    flex: 0 0 100%; /* Full width for filters */
+    margin-bottom: 20px;
+  }
+
+  .article-grid {
+    justify-content: center; /* Center items */
+  }
+
+  .article-item {
+    width: calc(100% - 20px); /* Full width */
+  }
+
+  .article-item img {
+    height: auto;
+  }
+  .load-more {
+    width: 100%;
+  }
+  .load-more::before {
+    left: 410px;
+  }
+  .product-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+  .split-section {
+    flex-direction: column-reverse;
+  }
+  .split-text {
+    padding: 25px;
+  }
+  .split-text-head {
+    font-size: 14px;
+  }
+  .split-text h2 {
+    font-size: 35px;
+  }
+  .split-text p {
+    font-size: 16px;
+  }
+  .split-text button {
+    width: 100%;
+  }
+  .split-text button::before{
+  left: 410px;}
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .banner {
+    flex-direction: column-reverse;
+  }
+
+  .banner-content {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .breadcrumbs {
+    display: none;
+  }
+  .below-bar {
+    height: 10px;
+  }
+
+  .navbar-list {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .article-container {
+    flex-direction: column;
+  }
+
+  .article-filters {
+    flex: 0 0 100%; /* Full width for filters */
+    margin-bottom: 20px;
+  }
+
+  .article-grid {
+    justify-content: center; /* Center items */
+  }
+
+  .article-item {
+    width: calc(100% - 20px); /* Full width */
+  }
+
+  .article-item img {
+    height: auto;
+  }
+  .load-more {
+    width: 100%;
+  }
+  .load-more::before {
+    left: 410px;
+  }
+  .product-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+  .split-section {
+    flex-direction: column-reverse;
+  }
+  .split-text {
+    padding: 25px;
+  }
+  .split-text-head {
+    font-size: 14px;
+  }
+  .split-text h2 {
+    font-size: 35px;
+  }
+  .split-text p {
+    font-size: 16px;
+  }
+  .split-text button {
+    width: 100%;
+  }
+  .split-text button::before{
+  left: 410px;}
+}
+
