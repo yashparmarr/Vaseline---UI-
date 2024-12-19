@@ -230,7 +230,17 @@ body {
   background-color: #d6c07c;
   transform: translateY(-50%); /* Center the line vertically */
 }
-
+.arrowhead {
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    top: 100%; /* Adjust as needed */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #d6c07c;
+  }
   
   .timeline-item.right::before {
     left: -12px;
