@@ -895,9 +895,10 @@ body {
 
 .head1 {
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom:10px;
   text-align: center;
-  font-size: smaller;
+  font-size: 20px;
   color: #030b62;
 }
 
@@ -909,8 +910,8 @@ body {
 .head1::after {
   content: ""; /* Creates the visual line */
   display: block;
-  height: 3px; /* Adjust the thickness of the line */
-  width: 60px; /* Adjust the width of the line */
+  height: 5px; /* Adjust the thickness of the line */
+  width: 80px; /* Adjust the width of the line */
   background: linear-gradient(
     90deg,
     #cfc192,
@@ -926,7 +927,7 @@ body {
 }
 
 .text1 {
-  margin-top: 30px;
+  margin-top: 50px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: small;
@@ -936,25 +937,28 @@ body {
 }
 
 .backgroundblue {
-  background: linear-gradient(to right, #031323, #0e4173, #0a4a8a, #083f77);
+  /* background: linear-gradient(to right, #031323, #0e4173, #0a4a8a, #083f77); */
   color: white;
+  background-color:#1C355B;
   padding: 20px 0;
   align-items: center;
-  height: auto;
+  height: 34vh;
+  padding-top:5vh;
+  z-index:100;
 }
 
 .headunique {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 5px;
   text-align: center;
-  font-size: small;
+  font-size: 16px;
 }
 
 .headunique::after {
   content: ""; /* Creates the visual line */
   display: block;
-  height: 3px; /* Adjust the thickness of the line */
-  width: 60px; /* Adjust the width of the line */
+  height: 5px; /* Adjust the thickness of the line */
+  width: 90px; /* Adjust the width of the line */
   background: linear-gradient(
     90deg,
     #cfc192,
@@ -976,6 +980,11 @@ body {
   font-size: small;
   font-weight: 0;
   margin-bottom: 40px;
+  background-color: 
+}
+
+.textunique > h3 {
+background-color:  #1C355B;
 }
 
 /* Parent container */
@@ -983,9 +992,9 @@ body {
   display: flex; /* Align sections horizontally */
   align-items: center; /* Center sections vertically */
   justify-content: space-evenly; /* Space sections evenly */
-  margin-top: -90px; /* Adjust as needed */
+  margin-top: -10px; /* Adjust as needed */
   position: relative; /* For ::after pseudo-element */
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 /* Golden vertical line */
@@ -1115,9 +1124,8 @@ body {
 
 header {
   text-align: center;
-
   color: white;
-  padding: 20px 10px;
+  /* padding: 20px 10px; */
 }
 
 header h1 {
