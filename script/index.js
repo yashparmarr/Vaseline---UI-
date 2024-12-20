@@ -1,3 +1,4 @@
+
 const backToTopBtn = document.getElementById("back-to-top-btn");
 backToTopBtn.style.display = "none";
 
@@ -18,13 +19,13 @@ backToTopBtn.addEventListener("click", () => {
 
 document.querySelectorAll('.product-hovering').forEach((item) => {
   item.addEventListener('mouseenter', () => {
-      const hoverContainer = item.querySelector('.hover-product-container');
-      hoverContainer.style.display = '';
+    const hoverContainer = item.querySelector('.hover-product-container');
+    hoverContainer.style.display = '';
   });
-
+  
   item.addEventListener('mouseleave', () => {
-      const hoverContainer = item.querySelector('.hover-product-container');
-      hoverContainer.style.display = 'none';
+    const hoverContainer = item.querySelector('.hover-product-container');
+    hoverContainer.style.display = 'none';
   });
 });
 
@@ -43,3 +44,8 @@ searchButton.addEventListener('click', () => {
 closeSearchPage.addEventListener('click', () => {
   searchPage.style.display = 'none'; 
 });
+
+console.log('Script is running');
+console.log(searchButton, searchPage, closeSearchPage);
+
+  // console.log(searchButton,searchPage,closeSearchPage);

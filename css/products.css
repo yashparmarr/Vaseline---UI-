@@ -197,16 +197,12 @@ body {
   cursor: pointer;
 }
 
-.hover-product-container-1st-1st > h3 > a{
+.hover-product-container-1st-1st > h3 > a {
   text-decoration: none ;
   color:#1c355b;
   cursor: pointer;
 }
 
-.hover-Articles-container-1st-1st > h3 > a{
-  text-decoration: none ;
-  cursor: pointer;
-}
 
 .hover-product-container-1st-1st:hover {
   text-decoration: underline;
@@ -352,6 +348,12 @@ body {
 
 .hover-Articles-container-1st-1st {
   gap: 5px;
+}
+
+.hover-Articles-container-1st-1st > h3 > a{
+  text-decoration: none ;
+  color:#1c355b;
+  cursor: pointer;
 }
 
 .hover-Articles-container-1st > .hover-Articles-container-1st-1st img {

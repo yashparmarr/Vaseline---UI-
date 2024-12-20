@@ -195,6 +195,7 @@ body {
 
 .hover-Articles-container-1st-1st > h3 > a{
   text-decoration: none ;
+  color:  #1c355b;
   cursor: pointer;
 }
 
@@ -617,6 +618,7 @@ body {
 /* Search Section */
 
 .search-page {
+  display:none;
   position: absolute;
   top: 0;
   left: 0;
